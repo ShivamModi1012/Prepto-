@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toll Payment</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+      <link href="style.css" type="text/css" rel="stylesheet">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+    </style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="main page.html">Home</a>
+  <a href="recipet.html"> PaymentRecipet</a>  
+  <a href="about.html">About Me</a>
+</div>
+<span style="font-size:30px;cursor:pointer;margin-left: 15px;" onclick="openNav()">&#9776;</span><div id="main"><div class="aboutme"><h2>About Me..</h2></div>
+</div>
+    <div id="myimg"><img src="me.jpeg"</div><div id="mytext"><pre>I Shivam Modi, student of "Computer Science Engineering, Second year (3rd Semester),<br>Chitkara University, Rajpura Campus, hereby submit my project Of "Web Technology"<br>as an assignment for our 4th Formattive assesment to our respected lecturer<br>Mrs. Navjeet Kaur.</pre></div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+   
+</body>
+</html> 

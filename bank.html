@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+      <meta charset="utf-8"/>
+      <title>Toll Payment</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+      <link href="style.css" type="text/css" rel="stylesheet">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+     <script>
+        var v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11;
+        v1=0;
+        v2=0;
+        v3=0;
+        v4=0;
+        v5=0;
+        v6=0;
+        v7=0;
+         v8=0;
+         v9=0;
+         v10=0;
+         v11=0;
+        function check1()
+        {
+            //alert("Hello.");}
+            var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    var name = document.getElementById('fname').value;
+    if(name==""){
+         document.getElementById('s1').innerHTML='Please enter your full name.<br>';
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s1').innerHTML='Please enter your correct full name.<br>';
+    }else{
+        document.getElementById('s1').innerHTML='<font color="seagreen">Valid fill name given.</font><br>';
+        v1=1;
+    }
+        }
+         function check2()
+        {
+    var regName = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var name = document.getElementById('email').value;
+    if(name==""){
+         document.getElementById('s2').innerHTML='Please enter your Email Address.<br>';
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s2').innerHTML='Please enter your correct Email Address.<br>';
+    }else{
+        document.getElementById('s2').innerHTML='<font color="seagreen">Valid Email Address given.</font><br>';
+        v2=1;
+    }
+        }
+         function check3()
+        {
+             var regName = /^\d+ [a-zA-Z]+ {0,1}[a-zA-Z]*$/;
+    var name = document.getElementById('adr').value;
+    if(name==""){
+         document.getElementById('s3').innerHTML='Please enter your House Address.<br>';
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s3').innerHTML='Please enter your correct House Address.<br>';
+    }else{
+        document.getElementById('s3').innerHTML='<font color="seagreen">Valid House Address given.</font><br>';
+        v3=1;
+    }
+        }
+         function check4()
+        {
+var regName = /^[a-zA-Z]+ {0,1}[a-zA-Z]*$/;
+    var name = document.getElementById('city').value;
+    if(name==""){
+         document.getElementById('s4').innerHTML="Please enter your City Name.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s4').innerHTML="Please enter your correct City name.<br>";
+    }else{
+        document.getElementById('s4').innerHTML="<font color='seagreen'>Valid City name given.</font><br>";
+        v4=1;
+    }
+        }
+         function check5()
+        {
+ var regName = /^[a-zA-Z]+ {0,1}[a-zA-Z]+$/;
+    var name = document.getElementById('state').value;
+    if(name==""){
+         document.getElementById('s5').innerHTML="Please enter your State Name.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s5').innerHTML="Please enter your correct State Name.<br>";
+    }else{
+        document.getElementById('s5').innerHTML="<font color='seagreen'>Valid State name given.</font><br>";
+        v5=1;
+    }
+        }
+         function check6()
+        {
+var regName = /^\d{5}$/;
+    var name = document.getElementById('zip').value;
+    if(name==""){
+         document.getElementById('s6').innerHTML="Please enter your ZIP Code.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s6').innerHTML="Please enter your correct ZIP Code.<br>";
+    }else{
+        document.getElementById('s6').innerHTML="<font color='seagreen'>Valid ZIP Code recorded.</font><br>";
+        v6=1;
+    }
+        }
+            function check7()
+        {
+var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    var name = document.getElementById('cname').value;
+    if(name==""){
+         document.getElementById('s7').innerHTML="Please enter name written on your debit-credit card.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s7').innerHTML="Please enter your correct name written on your debit-credit card.<br>";
+    }else{
+        document.getElementById('s7').innerHTML="<font color='seagreen'>Your name written on your debit-credit card had been recorded.</font><br>";
+        v7=1;
+    }
+        }
+            function check8()
+        {
+var regName = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+    var name = document.getElementById('ccnum').value;
+    if(name==""){
+         document.getElementById('s8').innerHTML="Please enter your 12 Digits debit-credit card number.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s8').innerHTML="Please enter your correct debit-credit card number.<br>";
+    }else{
+        document.getElementById('s8').innerHTML="<font color='seagreen'>Valid Debit-Credit Card number recorded.</font><br>";
+        v8=1;
+    }
+        }
+     function check9()
+        {
+var regName = /^[a-zA-Z]+$/;
+    var name = document.getElementById('expmonth').value;
+    if(name==""){
+         document.getElementById('s9').innerHTML="Please enter Month of expire for for debit-credit card.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s9').innerHTML="Please enter your correct Month of expire for your debit-credit card.<br>";
+    }else{
+        document.getElementById('s9').innerHTML="<font color='seagreen'>Your Responce had been recorded.</font><br>";
+        v9=1;
+    }
+        }
+    function check10()
+        {
+var regName = /^\d{4}$/;
+    var name = document.getElementById('expyear').value;
+    if(name==""){
+         document.getElementById('s10').innerHTML="Please enter Year of expire for your debit-credit card.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s10').innerHTML="Please enter your correct Year of expire debit-credit for your debit-credit card.<br>";
+    }else{
+        document.getElementById('s10').innerHTML="<font color='seagreen'>Your Responce had been recorded.</font><br>";
+        v10=1;
+    }
+        }
+          
+        function check11()
+        {
+var regName = /^\d{3}$/;
+    var name = document.getElementById('cvv').value;
+    if(name==""){
+         document.getElementById('s11').innerHTML="Please enter CVV code for your debit-credit card.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s11').innerHTML="Please enter your correct CVV code debit-credit for your debit-credit card.<br>";
+    }else{
+        document.getElementById('s11').innerHTML="<font color='seagreen'>Your Responce had been recorded.</font><br>";
+        v11=1;
+    }
+        }        
+        function responce()
+        {
+            var valid;
+            if(v1 == 1 && v2 == 1 && v3 == 1 && v4 == 1 && v5 == 1 && v6 == 1 && v7 == 1 && v8 ==1 && v9 == 1 && v10 == 1 && v11 == 1)
+              {  alert("Responce Submitted Successfully..");
+               valid=true;}
+            else
+            {alert("All fields are Mandatory to fill!!");
+             valid=false;}
+            return valid;
+        }
+    </script>
+<div class="row">
+  <div class="col-75">
+    <div class="container1">
+      <form action="recipet.html" onsubmit="return responce();">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname" id="name"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" onmouseout="check1()"><span id="s1"></span>
+            <label for="email" id="name"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com" onmouseout="check2()"><span id="s2"></span>
+            <label for="adr" id="name"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" onmouseout="check3()"><span id="s3"></span>
+            <label for="city" id="name"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York" onmouseout="check4()"><span id="s4"></span>
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state" id="name">State</label>
+                <input type="text" id="state" name="state" placeholder="NY" onmouseout="check5()"><span id="s5"></span>
+              </div>
+              <div class="col-50">
+                <label for="zip" id="name">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001" onmouseout="check6()"><span id="s6"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+             <img src="visa.png">
+             <img src="master.jpg" height="250" width="250">
+             <img src="Maestro.png" height="250" width="250">
+            </div>
+            <label for="cname" id="name">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe" onmouseout="check7()"><span id="s7"></span>
+            <label for="ccnum" id="name">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" onmouseout="check8()"><span id="s8"></span>
+            <label id="name"for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September" onmouseout="check9()"><span id="s9"></span>
+
+            <div class="row">
+              <div class="col-50">
+                <label id="name"for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018" onmouseout="check10()"><span id="s10"></span>
+              </div>
+              <div class="col-50">
+                <label id="name"for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352" onmouseout="check11()"><span id="s11"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+                <input type="submit" value="Continue to checkout" id="btn" onclick="responce()">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      <h4>Total
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i> 
+        </span>
+      </h4>
+      <p><a href="#">Payment </a> <span class="price">$15</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$15</b></span></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

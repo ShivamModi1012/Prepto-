@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+      <meta "viewport" content="width=device-width, initial-scale=1">
+      <title>Toll Payment</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+      <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body id="grad">
+<div class="flex-container">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="main page.html">Home</a>
+  <a href="recipet.html">Payment Recipet</a>
+     <a href="about.html">About Me</a>
+</div>
+
+<div id="main">
+   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+    <div class="top">
+    <div class="backdrop">
+        <h2 class="text1">PREPTO</h2></div></div>
+<div class="means">
+<h3><i>"Pre Payment of Toll"</i</h3>
+</div>
+ <div class="container">
+  <img src="toll.jpg" alt="toll" class="imagetoll"> 
+  <div class="overlay">
+    <div class="text">Welcome You All</div>
+  </div>
+</div>
+        <div id="axis" class="one">
+<img class="object van move-right" src="car.png"/>
+</div>
+<div class="register">
+	<h3>Please get Your Vehicle Registered Here!!</h3>
+</div>
+<table align="center">
+<tr>
+<td>
+<form action="registeration.html">
+<button class="button" style="vertical-align:middle"><span>Register Here </span></button>
+</form>
+</td>
+</tr>
+</table>
+</div>
+    <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+</body>
+</html>

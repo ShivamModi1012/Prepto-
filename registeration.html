@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+      <meta charset="utf-8"/>
+      <title>Toll Payment</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+      <link href="style.css" type="text/css" rel="stylesheet">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <script>
+        var v1,v2,v3,v4,v5,v6,v7;
+        v1=0;
+        v2=0;
+        v3=0;
+        v4=0;
+        v5=0;
+        v6=0;
+        v7=0;
+        function check1()
+        {
+            var regName = /^[a-zA-Z]+$/;
+    var name = document.getElementById('fname').value;
+    if(name==""){
+         document.getElementById('s1').innerHTML='Please enter your first name.<br>';
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s1').innerHTML='Please enter your correct first name.<br>';
+    }else{
+        document.getElementById('s1').innerHTML='<font color="seagreen">Valid first name given.</font><br>';
+        v1=1;
+    }
+        }
+        function check2()
+        {
+    var regName = /^[A-Z][a-z]+$/;
+    var name = document.getElementById('lname').value;
+    if(name==""){
+         document.getElementById('s2').innerHTML='Please enter your last name.<br>';
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s2').innerHTML='Please enter your correct last name.<br>';
+    }else{
+        document.getElementById('s2').innerHTML='<font color="seagreen">Valid  last name given.</font><br>';
+        v2=1;
+    }
+        }
+         function check3()
+        {
+    var regName = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var name = document.getElementById('email').value;
+    if(name==""){
+         document.getElementById('s3').innerHTML='Please enter your Email Address.<br>';
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s3').innerHTML='Please enter your correct Email Address.<br>';
+    }else{
+        document.getElementById('s3').innerHTML='<font color="seagreen">Valid Email Address given.</font><br>';
+        v3=1;
+    }
+        }
+         function check4()
+        {
+             var regName = /^[A-Z]{2} [0-9]{2} [A-Z]{1,2} [0-9]{4}$/;
+    var name = document.getElementById('adr').value;
+    if(name==""){
+         document.getElementById('s4').innerHTML='Please enter your Vehicle Registeration Number.<br>';
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s4').innerHTML='Please enter your correct Vehichle Registration Number.<br>';
+    }else{
+        document.getElementById('s4').innerHTML='<font color="seagreen">Valid Vehichle Registration Number given.</font><br>';
+        v4=1;
+    }
+        }
+         function check5()
+        {
+var regName = /^[A-Z]{2}[0-9]{2} [0-9]{11}$/;
+    var name = document.getElementById('lisence').value;
+    if(name==""){
+         document.getElementById('s5').innerHTML="Please enter your Owner's Lisence Number.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s5').innerHTML="Please enter your correct Owner's Lisence Number.<br>";
+    }else{
+        document.getElementById('s5').innerHTML="<font color='seagreen'>Valid Owner's Lisence Number given.</font><br>";
+        v5=1;
+    }
+        }
+         function check6()
+        {
+ var regName = /^[A-Z][a-z]+$/;
+    var name = document.getElementById('city1').value;
+    if(name==""){
+         document.getElementById('s6').innerHTML="Please enter Departure Location.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s6').innerHTML="Please enter your correct Departure Location.<br>";
+    }else{
+        document.getElementById('s6').innerHTML="<font color='seagreen'>Your Responce had been recorded.</font><br>";
+        v6=1;
+    }
+        }
+         function check7()
+        {
+var regName = /^[A-Z][a-z]+$/;
+    var name = document.getElementById('city2').value;
+    if(name==""){
+         document.getElementById('s7').innerHTML="Please enter Destination Location.<br>";
+    }
+            else if(!regName.test(name)){
+        document.getElementById('s7').innerHTML="Please enter your correct Destination Location.<br>";
+    }else{
+        document.getElementById('s7').innerHTML="<font color='seagreen'>Your Responce had been recorded.</font><br>";
+        v7=1;
+    }
+        }
+        function responce()
+        {
+            var valid;
+            if(v1 == 1 && v2 == 1 && v3 == 1 && v4 == 1 && v5 == 1 && v6 == 1 && v7 == 1)
+              {  alert("Responce Submitted Successfully..");
+               valid=true;}
+            else
+            {alert("All fields are Mandatory to fill!!");
+             valid=false;}
+            return valid;
+        }
+    </script>
+<div class="container">
+<div class="row">
+  <div class="col-75">
+    <div class="container1">
+      <form action="payment.html" onsubmit="return responce();">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Vehicle's Details</h3>
+            <label for="fname" id="name"><i class="fa fa-user"></i> Owner's First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John" onmouseout="check1()"><span id="s1"></span>
+	    <label for="fname" id="name"><i class="fa fa-user"></i> Owner's Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Doe" onmouseout="check2()"><span id="s2"></span>
+            <label for="email" id="name"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" class="fname" placeholder="john@example.com" onmouseout="check3()"><span id="s3"></span>
+            <label for="adr" id="name"><i class="fa fa-address-card-o"></i> Vehicle Registration Number</label>
+            <input type="text" id="adr" name="address"  placeholder="AB 11 CD 0000" onmouseout="check4()"><span id="s4"></span>
+	     <label for="adr" id="name"><i class="fa fa-address-card-o"></i> Owner's Lisence Number</label>
+            <input type="text" id="lisence" name="address"  placeholder="AB00 20001111111" onmouseout="check5()"><span id="s5"></span>
+            <label for="city" id="name"><i class="fa fa-institution"></i> From:</label>
+            <input type="text" id="city1" name="city" class="fname" placeholder="Chandigarh" onmouseout="check6()"><span id="s6"></span>
+	    <label for="city" id="name"><i class="fa fa-institution"></i> To:</label>
+            <input type="text" id="city2" name="city" class="fname" placeholder="Delhi" onmouseout="check7()"><span id="s7"></span>
+          </div>
+ <input type="submit" value="Payment" id="btn" onclick="responce()">
+      </form>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
